@@ -1,14 +1,6 @@
-const path = require('path')
+const _ = require('lodash')
 
-console.log(path.sep)
+const items =[1,[2,[3,[4]]]];
 
-const filePath=path.join('./content','subfolder','test.txt')
-
-console.log(filePath)
-
-
-const base = path.basename(filePath)
-console.log(base)
-
-const absolute = path.resolve(__dirname,'content','subfolder','test,txt')
-
+const newItem = _.flattenDeep(items)
+console.log(newItem)
